@@ -1,0 +1,74 @@
+/**
+ * Custom styles for Estate Refurbishment Dashboard
+ * Most styling is handled by Tailwind CSS via CDN
+ */
+
+/* Theme CSS Variables */
+:root,
+.theme-light {
+  --bg-color: #f3f4f6;
+  --surface-color: #ffffff;
+  --subsurface-color: #e5e7eb;
+  --card-color: rgba(255, 255, 255, 0.9);
+  --border-color: #d1d5db;
+  --text-color: #0f172a;
+  --muted-text: #4b5563;
+  --accent-color: #0284c7;
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(209, 213, 219, 0.5);
+}
+
+.theme-dark {
+  --bg-color: #020617;
+  --surface-color: #0f172a;
+  --subsurface-color: #1e293b;
+  --card-color: rgba(15, 23, 42, 0.8);
+  --border-color: #1f2937;
+  --text-color: #e5e7eb;
+  --muted-text: #9ca3af;
+  --accent-color: #38bdf8;
+  --glass-bg: rgba(15, 23, 42, 0.8);
+  --glass-border: rgba(31, 41, 55, 0.5);
+}
+
+.theme-night {
+  --bg-color: #010616;
+  --surface-color: #020922;
+  --subsurface-color: #0b1120;
+  --card-color: rgba(2, 9, 34, 0.8);
+  --border-color: #1d4ed8;
+  --text-color: #e0f2fe;
+  --muted-text: #93c5fd;
+  --accent-color: #60a5fa;
+  --glass-bg: rgba(2, 9, 34, 0.9);
+  --glass-border: rgba(29, 78, 216, 0.4);
+}
+
+/* Glass effect using CSS variables */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Ensure select dropdowns have good contrast */
+select {
+  color: var(--text-color);
+  background-color: var(--surface-color);
+}
+
+select option {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+}
+
+/* Smooth transitions for theme changes */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
